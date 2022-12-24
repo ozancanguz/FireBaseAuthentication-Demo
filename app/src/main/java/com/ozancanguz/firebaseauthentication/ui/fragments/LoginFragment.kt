@@ -39,12 +39,26 @@ class LoginFragment : Fragment() {
         auth = Firebase.auth
 
         register()
+        signIn()
 
 
 
         return view
     }
 
+    private fun signIn() {
+       binding.signInBtn.setOnClickListener {
+           val email=binding.emailET.text.toString()
+           val password=binding.passwordET.text.toString()
+
+           auth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
+               findNavController().navigate(R.id.action_loginFragment_to_userDetailsFragment)
+           }.addOnFailureListener {
+               Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_LONG).show()
+           }
+
+       }
+    }
 
 
     private fun register() {
