@@ -40,7 +40,7 @@ private val args:UserDetailsFragmentArgs by navArgs()
 
     private fun updateUi() {
 
-        binding.emailtextView.setText(" Welcome " + args.email)
+        binding.emailtextView.setText( args.email)
 
     }
 
