@@ -18,5 +18,9 @@
         android:id="@+id/userDetailsFragment"
         android:name="com.ozancanguz.firebaseauthentication.ui.fragments.UserDetailsFragment"
         android:label="fragment_user_details"
-        tools:layout="@layout/fragment_user_details" />
+        tools:layout="@layout/fragment_user_details" >
+        <action
+            android:id="@+id/action_userDetailsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
