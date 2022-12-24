@@ -52,10 +52,14 @@ class LoginFragment : Fragment() {
            val password=binding.passwordET.text.toString()
 
            auth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
-               findNavController().navigate(R.id.action_loginFragment_to_userDetailsFragment)
+               val direction=LoginFragmentDirections.actionLoginFragmentToUserDetailsFragment(email)
+               findNavController().navigate(direction)
+
            }.addOnFailureListener {
                Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_LONG).show()
            }
+
+
 
        }
     }
@@ -67,7 +71,8 @@ class LoginFragment : Fragment() {
               val email=binding.emailET.text.toString()
               val password=binding.passwordET.text.toString()
                   auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
-                      findNavController().navigate(R.id.action_loginFragment_to_userDetailsFragment)
+                      Toast.makeText(requireContext(),"User created. Click on sign in button"
+                          ,Toast.LENGTH_LONG).show()
                   }.addOnFailureListener {
                       Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_LONG).show()
                   }

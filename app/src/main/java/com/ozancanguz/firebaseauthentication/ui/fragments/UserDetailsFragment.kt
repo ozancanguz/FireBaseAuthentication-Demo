@@ -4,25 +4,22 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.ozancanguz.firebaseauthentication.R
-import com.ozancanguz.firebaseauthentication.databinding.FragmentLoginBinding
 import com.ozancanguz.firebaseauthentication.databinding.FragmentUserDetailsBinding
 
 
 class UserDetailsFragment : Fragment() {
     private var _binding: FragmentUserDetailsBinding? = null
     private val binding get() = _binding!!
+private val args:UserDetailsFragmentArgs by navArgs()
 
     private lateinit var auth: FirebaseAuth
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,9 +33,15 @@ class UserDetailsFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-
+        updateUi()
 
         return view
+    }
+
+    private fun updateUi() {
+
+        binding.emailtextView.setText(" Welcome " + args.email)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
