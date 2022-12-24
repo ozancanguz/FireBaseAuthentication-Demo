@@ -7,3 +7,7 @@ I have built a small app with firebase login application with lottie animations.
 - Navigation Component
 - Firebase Authentication
 - LottieAnimationView
+
+-------------------------------------Here is the demo------------------------
+
+
