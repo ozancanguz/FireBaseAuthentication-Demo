@@ -1,7 +1,8 @@
-package com.ozancanguz.firebaseauthentication
+package com.ozancanguz.firebaseauthentication.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ozancanguz.firebaseauthentication.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

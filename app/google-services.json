@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "625931117601",
+    "project_id": "kotlin-authentication-55110",
+    "storage_bucket": "kotlin-authentication-55110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625931117601:android:983218e95a4506082aef60",
+        "android_client_info": {
+          "package_name": "com.ozancanguz.firebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625931117601-v8ei4a32he9dfdcb6jndosvsrmiskgus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgJSOpT1lM7cAN595rsqUe7LE8BJmS2DY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625931117601-v8ei4a32he9dfdcb6jndosvsrmiskgus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
